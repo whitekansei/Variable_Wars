@@ -57,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/01.CWtest.loader.js";
+      var loaderUrl = buildUrl + "/Chaotic_Wars.loader.js";
       var config = {
-        dataUrl: buildUrl + "/01.CWtest.data",
-        frameworkUrl: buildUrl + "/01.CWtest.framework.js",
-        codeUrl: buildUrl + "/01.CWtest.wasm",
+        dataUrl: buildUrl + "/Chaotic_Wars.data",
+        frameworkUrl: buildUrl + "/Chaotic_Wars.framework.js",
+        codeUrl: buildUrl + "/Chaotic_Wars.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "whitekansei",
         productName: "Chaotic_Wars",
@@ -108,7 +108,7 @@
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
                 fullscreenButton.onclick = () => {
-                  unityInstance.SetFullscreen(1);
+                  document.makeFullscreen('unity-container');
                 };
               }).catch((message) => {
                 alert(message);
